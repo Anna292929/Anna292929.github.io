@@ -4,7 +4,23 @@
     <meta charset="UTF-8">
     <title>Exercise 11</title>
     <style>
-        body {
+        .label-text {
+            font-family: "Times New Roman", serif;
+            font-size: 24px;
+        }
+
+        input[type="text"] {
+            width: 400px;
+            height: 40px;
+            font-size: 24px;
+        }
+
+        input[type="submit"] {
+            font-size: 24px;
+        }
+
+        input[type="reset"] {
+            font-size: 24px;
             font-family: "Times New Roman", serif;
         }
     </style>
@@ -12,13 +28,13 @@
 <body>
 
 <form>
-    First name:<br>
+    <span class="label-text">First name:</span><br>
     <input type="text" value="Your first name"><br><br>
 
-    Last name:<br>
+    <span class="label-text">Last name:</span><br>
     <input type="text" value="Your last name"><br><br>
 
-    Student ID:<br>
+    <span class="label-text">Student ID:</span><br>
     <input type="text" value="Your student ID"><br><br><br>
 
     <input type="submit" value="Submit">
