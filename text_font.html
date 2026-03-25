@@ -3,39 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <title>Exercise 18</title>
-
 <style>
     body{
         font-family:"Times New Roman", serif;
-        background:white;
+        background:#ffffff;
     }
 
     .outer{
         width:620px;
         margin:20px;
         padding:10px;
-        background:white;
-        border:1px solid #ccc;
-        box-shadow:0 0 10px gray;
+        background:#e9e9e9;
+        border:1px solid #d0d0d0;
+        box-shadow:0 0 8px #999;
+    }
+
+    .h1box{
+        position:relative;
+        display:inline-block;
+        margin:0 0 28px 0;
+        padding-top:12px;
+    }
+
+    .h1box::before{
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:5px;
+        background:black;
+        box-shadow:0 3px 0 pink;
     }
 
     h1{
-        display:inline-block;
-        font-size:46px;
+        margin:0;
+        font-size:48px;
         font-weight:bold;
         color:black;
         text-shadow:3px 3px pink;
-        border-top:6px solid black;
-        box-shadow:0 -3px 0 pink;
-        padding-top:6px;
-        margin:0 0 25px 0;
+        line-height:1;
     }
 
     h2{
+        margin:0 0 25px 0;
         width:600px;
         border:2px solid yellow;
-        padding:2px;
-        margin:0 0 25px 0;
+        padding:1px;
+        box-sizing:border-box;
     }
 
     h2 span{
@@ -44,29 +59,29 @@
         font-size:24px;
         font-style:italic;
         font-weight:bold;
-        padding:3px 4px;
+        padding:4px 3px;
+        line-height:1.1;
     }
 
     h3{
+        margin:0;
         font-size:22px;
         font-weight:bold;
         text-decoration:underline;
         text-align:right;
-        margin:0;
     }
 </style>
-
 </head>
 <body>
 
 <div class="outer">
-
-    <h1>This is heading 1</h1>
+    <div class="h1box">
+        <h1>This is heading 1</h1>
+    </div>
 
     <h2><span>This is heading 2</span></h2>
 
     <h3>This is heading 3</h3>
-
 </div>
 
 </body>
