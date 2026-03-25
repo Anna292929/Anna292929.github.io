@@ -3,81 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <title>Exercise 18</title>
+
 <style>
     body{
+        background-color:white;
         font-family:"Times New Roman", serif;
-        background:#ffffff;
     }
 
     .outer{
-        width:620px;
+        width:640px;
+        border:2px solid black;
         margin:20px;
-        padding:10px 10px 12px 10px;
-        background:#ffffff;
-        border:1px solid #cfcfcf;
-        box-shadow:0 0 12px #999999;
+        padding:10px;
+        background-color:white;
+        box-shadow:0 0 10px gray;
     }
 
     h1{
-        position:relative;
-        display:inline-block;
-        margin:0 0 28px 0;
-        padding-top:12px;
-        font-size:46px;
+        font-size:48px;
         font-weight:bold;
-        color:#000000;
-        text-shadow:3px 3px 0 pink;
-        line-height:1;
-    }
-
-    h1::before{
-        content:"";
-        position:absolute;
-        left:0;
-        top:0;
-        width:100%;
-        height:6px;
-        background:#000000;
-        box-shadow:3px 3px 0 pink;
+        color:black;
+        text-shadow:3px 3px pink;
+        border-top:6px solid black;
+        display:inline-block;
+        margin:0 0 25px 0;
+        padding-top:5px;
     }
 
     h2{
-        margin:0 0 26px 0;
-        padding:1px;
-        width:600px;
         border:2px solid yellow;
-        box-sizing:border-box;
+        padding:2px;
+        margin:0 0 25px 0;
+        width:590px;
     }
 
     h2 span{
         display:block;
         border:1px solid black;
-        padding:2px 4px;
-        font-size:23px;
+        font-size:28px;
         font-style:italic;
         font-weight:bold;
-        color:#000000;
-        line-height:1.1;
+        padding:4px;
     }
 
     h3{
-        margin:0;
-        font-size:22px;
+        font-size:24px;
         font-weight:bold;
-        color:#000000;
+        color:black;
         text-decoration:underline;
         text-align:right;
+        margin:0;
     }
 </style>
+
 </head>
 <body>
 
 <div class="outer">
+
     <h1>This is heading 1</h1>
 
-    <h2><span>This is heading 2</span></h2>
+    <h2>
+        <span>This is heading 2</span>
+    </h2>
 
     <h3>This is heading 3</h3>
+
 </div>
 
 </body>
