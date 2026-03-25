@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Outline, Text and Fonts Exercise</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    
+    <style>
+        p.dotted {outline-style: dotted; outline-color: red; outline-width: 3px;}
+        p.dashed {outline-style: dashed; outline-color: blue; outline-width: 3px;}
+        p.solid {outline-style: solid; outline-color: green; outline-width: 3px;}
+        p.double {outline-style: double; outline-color: orange; outline-width: 5px;}
+        p.groove {outline-style: groove; outline-color: gray; outline-width: 5px;}
+        p.ridge {outline-style: ridge; outline-color: gray; outline-width: 5px;}
+        p.inset {outline-style: inset; outline-color: gray; outline-width: 5px;}
+        p.outset {outline-style: outset; outline-color: gray; outline-width: 5px;}
 
+        .offset-example {
+            margin: 20px;
+            border: 1px solid black;
+            outline: 4px solid red;
+            outline-offset: 15px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+        .text-decor {
+            text-decoration: overline line-through underline;
+            text-decoration-color: red;
+        }
+
+        .sofia-text {
+            font-family: "Sofia";
+            font-size: 22px;
+        }
+
+        p.shorthand {
+            font: italic small-caps bold 12px/30px Georgia, serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="text-center">CSS Outline, Text and Fonts</h1>
+
+    <p class="dotted">A dotted outline.</p>
+    <p class="dashed">A dashed outline.</p>
+    <p class="solid">A solid outline.</p>
+    <p class="double">A double outline.</p>
+    <p class="groove">A groove outline.</p>
+    <p class="ridge">A ridge outline.</p>
+    <p class="inset">An inset outline.</p>
+    <p class="outset">An outset outline.</p>
+
+    <div class="offset-example">This element has an outline offset of 15px.</div>
+
+    <hr>
+
+＝    <p class="text-decor">This text has overline, line-through, and underline decorations.</p>
+
+    <hr>
+
+＝    <p class="sofia-text">Sofia Font: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    <p class="shorthand">This paragraph uses the CSS shorthand font property (italic, small-caps, bold, 12px Georgia).</p>
+
+</body>
+</html>
