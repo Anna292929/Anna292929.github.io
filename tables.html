@@ -49,9 +49,9 @@ tr:nth-child(even) td {
   background-color: yellow;
 }
 
-/* 右上角固定 div */
+/* 右上角方框（已對齊表格） */
 .fixed-box {
-  position: fixed;
+  position: absolute;  /* 關鍵改這裡 */
   top: 20px;
   right: 20px;
   border: 3px solid green;
@@ -87,11 +87,11 @@ tr:nth-child(even) td {
     </tr>
   </table>
 
-</div>
+  <!-- 右上角方框 -->
+  <div class="fixed-box">
+    This div element has position: fixed;
+  </div>
 
-<!-- 固定在右上角 -->
-<div class="fixed-box">
-  This div element has position: fixed;
 </div>
 
 </body>
