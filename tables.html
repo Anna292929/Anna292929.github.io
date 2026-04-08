@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exercise</title>
 
+<style>
+body {
+  background-color: white;
+  font-family: Arial;
+}
+
+/* 外框 */
+.container {
+  width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #eee;
+  box-shadow: 2px 2px 8px gray;
+  position: relative;
+}
+
+/* 表格 */
+table {
+  border-collapse: collapse;
+  width: 300px;
+}
+
+/* 表頭 */
+th {
+  background-color: gray;
+  color: white;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+/* 表格內容 */
+td {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+/* 交錯顏色 */
+tr:nth-child(odd) td {
+  background-color: yellow;
+}
+
+tr:nth-child(even) td {
+  background-color: lightgray;
+}
+
+/* 右上角固定 div */
+.fixed-box {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border: 3px solid green;
+  padding: 15px;
+  width: 180px;
+  background-color: white;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- 表格 -->
+  <table>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+  </table>
+
+</div>
+
+<!-- 固定在右上角 -->
+<div class="fixed-box">
+  This div element has position: fixed;
+</div>
+
+</body>
+</html>
