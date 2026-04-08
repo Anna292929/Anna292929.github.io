@@ -1,79 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Exercise</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonnet Layout</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 18px;
+            line-height: 1.4;
+            padding: 40px;
+            color: #333;
+            max-width: 900px;
+        }
 
-<style>
-body {
-  background-color: #eee;
-  font-family: "Times New Roman", serif;
-}
+        /* The green float box on the right */
+        .float-sidebar {
+            float: right;
+            width: 160px;
+            height: 180px;
+            border: 4px solid #76b041; /* Green border */
+            padding: 10px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            overflow: auto; /* Enables the scrollbar */
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
 
-/* 外框 */
-.container {
-  width: 900px;
-  margin: 30px auto;
-  background-color: white;
-  padding: 20px;
-  border: 3px solid #333;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
-}
+        /* The yellow highlighted boxes */
+        .highlight {
+            display: inline-block;
+            background-color: yellow;
+            border: 2px solid blue;
+            padding: 0 4px;
+            line-height: 1.1;
+            font-weight: normal;
+        }
 
-/* 右側浮動區塊 */
-.float-box {
-  float: right;
-  width: 220px;
-  height: 180px;
-  border: 5px solid green;
-  padding: 10px;
-  overflow: auto;
-  margin-left: 20px;
-  background-color: #f9f9f9;
-}
-
-/* 黃色標記（inline-block） */
-.highlight {
-  display: inline-block;
-  background-color: yellow;
-  padding: 2px 6px;
-  border: 1px solid #999;
-}
-
-/* 文字 */
-p {
-  line-height: 1.6;
-  font-size: 18px;
-}
-</style>
+        p {
+            margin: 0;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+    <div class="float-sidebar">
+        A float div with overflow auto. A float div with overflow auto. A float div with overflow auto.
+    </div>
 
-  <div class="float-box">
-    A float div with overflow auto. 
-    A float div with overflow auto. 
-    A float div with overflow auto. 
-    A float div with overflow auto. 
-    A float div with overflow auto.
-  </div>
-
-  <p>
-    (Just long sentence.) Let me not to the marriage of true minds 
-    Admit impediments. <span class="highlight">Love</span> is not love 
-    Which alters when it alteration finds, Or bends with the remover to remove: 
-    O, no! it is an ever-fixed mark, That looks on tempests and is never shaken; 
-    It is the star to every wand’ring bark, Whose worth’s unknown, although his height be taken. 
-    <span class="highlight">Love's</span> not Time's fool, though rosy lips and cheeks 
-    Within his bending sickle’s compass come; 
-    <span class="highlight">Love</span> alters not with his brief hours and weeks, 
-    But bears it out even to the edge of doom: 
-    If this be error and upon me proved, I never writ, nor no man ever loved.
-  </p>
-
-</div>
+    <p>
+        (Just long sentence.) Let me not to the marriage of
+        true minds Admit impediments. <span class="highlight">Love</span> is not love
+        Which alters when it alteration finds, Or bends with
+        the remover to remove: O, no! it is an ever-fix`ed
+        mark, That looks on tempests and is never shaken; It
+        is the star to every wand'ring bark, Whose worth's
+        unknown, although his heighth be taken. <span class="highlight">Love's</span> not
+        Time's fool, though rosy lips and cheeks Within his bending sickle's
+        compass come; <span class="highlight">Love</span> alters not with his brief hours and weeks, But
+        bears it out even to the edge of doom: If this be error and upon me
+        proved, I never writ, nor no man ever loved.
+    </p>
 
 </body>
 </html>
