@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Responsive Layout</title>
 
+<style>
+body {
+  margin: 0;
+  background: linear-gradient(to right, #4aa3d8, #5fb3e6);
+  font-family: Arial;
+}
+
+/* 外框 */
+.container {
+  width: 90%;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* 區塊共用 */
+.box {
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/* 上方綠色 */
+.header {
+  background: #a8cf45;
+  height: 100px;
+}
+
+/* 中間藍色 */
+.middle {
+  display: flex;
+}
+
+.middle .box {
+  background: #1fb5c1;
+  flex: 1;
+  height: 120px;
+}
+
+/* 下方灰色 */
+.bottom {
+  display: flex;
+}
+
+.bottom .box {
+  background: #ddd;
+  flex: 1;
+  height: 80px;
+}
+
+/* 📱 小於480px時（直排） */
+@media (max-width: 480px) {
+
+  .middle {
+    flex-direction: column;
+  }
+
+  .bottom {
+    flex-direction: column;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- 綠色 -->
+  <div class="box header"></div>
+
+  <!-- 藍色 -->
+  <div class="middle">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+
+  <!-- 灰色 -->
+  <div class="bottom">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+
+</div>
+
+</body>
+</html>
