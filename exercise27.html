@@ -3,39 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Responsive Layout</title>
 
 <style>
 body {
   margin: 0;
   background: linear-gradient(to right, #4aa3d8, #5fb3e6);
-  font-family: Arial;
+  font-family: Arial, sans-serif;
 }
 
-/* 外框 */
 .container {
   width: 90%;
-  margin: 30px auto;
+  margin: 20px auto;
   background: #eee;
   border-radius: 25px;
-  padding: 20px;
+  padding: 15px;
   box-sizing: border-box;
 }
 
-/* 區塊 */
 .box {
-  border-radius: 15px;
-  margin: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  box-sizing: border-box;
 }
 
-/* 綠色 */
 .header {
   background: #a8cf45;
   height: 120px;
 }
 
-/* 藍色 */
 .middle {
   display: flex;
 }
@@ -43,48 +39,45 @@ body {
 .middle .box {
   background: #1fb5c1;
   flex: 1;
-  height: 150px;
+  height: 120px;
 }
 
-/* 灰色 */
 .bottom {
   display: flex;
 }
 
 .bottom .box {
-  background: #ccc;
+  background: #d6dadd;
   flex: 1;
-  height: 100px;
+  height: 60px;
 }
 
-/* 📱 手機版 */
+/* 手機版 */
 @media (max-width: 480px) {
-
   .middle {
     flex-direction: column;
   }
 
-  .bottom {
-    flex-direction: column;
+  .middle .box {
+    height: 60px;
   }
 
-  /* ⭐ 重點：手機時增加高度 */
-  .middle .box {
-    height: 120px;
+  .bottom {
+    flex-wrap: wrap;
   }
 
   .bottom .box {
-    height: 80px;
+    width: calc(50% - 10px);
+    flex: none;
+    height: 45px;
   }
 }
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
-
   <div class="box header"></div>
 
   <div class="middle">
@@ -99,7 +92,6 @@ body {
     <div class="box"></div>
     <div class="box"></div>
   </div>
-
 </div>
 
 </body>
