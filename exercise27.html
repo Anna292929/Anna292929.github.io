@@ -2,6 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
+<!-- ⭐ 這行是關鍵（沒有就不會切版） -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Responsive Layout</title>
 
 <style>
@@ -33,7 +37,7 @@ body {
   height: 100px;
 }
 
-/* 中間藍色 */
+/* 中間藍色（預設橫排） */
 .middle {
   display: flex;
 }
@@ -44,7 +48,7 @@ body {
   height: 120px;
 }
 
-/* 下方灰色 */
+/* 下方灰色（預設橫排） */
 .bottom {
   display: flex;
 }
@@ -55,7 +59,7 @@ body {
   height: 80px;
 }
 
-/* 📱 小於480px時（直排） */
+/* 📱 小於480px → 直排 */
 @media (max-width: 480px) {
 
   .middle {
