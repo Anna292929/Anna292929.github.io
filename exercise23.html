@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Button Demo</title>
 
+<style>
+body {
+  font-family: "Roboto", Arial;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* 外框 */
+.container {
+  width: 520px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 圖片 */
+.image-box img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* 按鈕 */
+.btn {
+  margin-top: 10px;
+  height: 22px;              /* 規格 h22 */
+  padding: 0 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;        /* 規格 R8 */
+  background-color: #ffffff;
+  font-size: 13px;
+  color: #2f2f2f;
+  cursor: pointer;
+}
+
+/* hover 效果 */
+.btn:hover {
+  background-color: #f2f2f2;
+}
+
+/* 詳細資訊 */
+.detail {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #707070;
+  display: none; /* 預設隱藏 */
+  line-height: 1.6;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- 圖片 -->
+  <div class="image-box">
+    <img src="https://picsum.photos/500/240" alt="image">
+  </div>
+
+  <!-- 按鈕 -->
+  <button class="btn" onclick="toggleDetail()">查看更多</button>
+
+  <!-- 詳細資訊 -->
+  <div class="detail" id="detailBox">
+    📅 日期：2017/01/12 <br>
+    📁 類型：JPG <br>
+    📏 尺寸：456 x 798 <br>
+    👤 作者：Designer <br>
+    🔗 來源：example.com
+  </div>
+
+</div>
+
+<script>
+function toggleDetail() {
+  const detail = document.getElementById("detailBox");
+
+  if (detail.style.display === "none") {
+    detail.style.display = "block";
+  } else {
+    detail.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
