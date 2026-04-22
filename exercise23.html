@@ -13,7 +13,6 @@ body {
   margin-top: 50px;
 }
 
-/* 外框 */
 .container {
   width: 520px;
   background: #fff;
@@ -22,39 +21,42 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* 圖片 */
 .image-box img {
   width: 100%;
   border-radius: 6px;
 }
 
-/* 按鈕 */
 .btn {
   margin-top: 10px;
-  height: 22px;              /* 規格 h22 */
+  height: 22px;
   padding: 0 12px;
   border: 1px solid #dcdcdc;
-  border-radius: 8px;        /* 規格 R8 */
+  border-radius: 8px;
   background-color: #ffffff;
   font-size: 13px;
   color: #2f2f2f;
   cursor: pointer;
 }
 
-/* hover 效果 */
 .btn:hover {
   background-color: #f2f2f2;
 }
 
-/* 詳細資訊 */
 .detail {
   margin-top: 15px;
   font-size: 13px;
   color: #707070;
-  display: none; /* 預設隱藏 */
+  display: none;
   line-height: 1.6;
   border-top: 1px solid #eee;
   padding-top: 10px;
+}
+
+/* 授權文字 */
+.credit {
+  font-size: 11px;
+  color: #999;
+  margin-top: 5px;
 }
 </style>
 </head>
@@ -65,7 +67,11 @@ body {
 
   <!-- 圖片 -->
   <div class="image-box">
-    <img src="https://picsum.photos/500/240" alt="image">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg" alt="Eiffel Tower">
+    
+    <div class="credit">
+      Photo by CrisNYCa (CC BY-SA 4.0)
+    </div>
   </div>
 
   <!-- 按鈕 -->
@@ -73,11 +79,13 @@ body {
 
   <!-- 詳細資訊 -->
   <div class="detail" id="detailBox">
-    📅 日期：2017/01/12 <br>
-    📁 類型：JPG <br>
-    📏 尺寸：456 x 798 <br>
-    👤 作者：Designer <br>
-    🔗 來源：example.com
+    Date：2017/01/12 <br>
+    Type：JPG <br>
+    Size：3648 x 5472 <br>
+    Source：
+    <a href="https://zh.wikipedia.org/zh-tw/%E8%89%BE%E8%8F%B2%E7%88%BE%E9%90%B5%E5%A1%94" target="_blank">
+      維基百科
+    </a>
   </div>
 
 </div>
@@ -86,7 +94,7 @@ body {
 function toggleDetail() {
   const detail = document.getElementById("detailBox");
 
-  if (detail.style.display === "none") {
+  if (detail.style.display === "none" || detail.style.display === "") {
     detail.style.display = "block";
   } else {
     detail.style.display = "none";
