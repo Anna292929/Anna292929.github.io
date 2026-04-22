@@ -2,8 +2,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
-<!-- ⭐ 這行是關鍵（沒有就不會切版） -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Responsive Layout</title>
@@ -19,25 +17,25 @@ body {
 .container {
   width: 90%;
   margin: 30px auto;
-  background: #fff;
-  border-radius: 20px;
-  padding: 15px;
+  background: #eee;
+  border-radius: 25px;
+  padding: 20px;
   box-sizing: border-box;
 }
 
-/* 區塊共用 */
+/* 區塊 */
 .box {
-  border-radius: 10px;
+  border-radius: 15px;
   margin: 10px;
 }
 
-/* 上方綠色 */
+/* 綠色 */
 .header {
   background: #a8cf45;
-  height: 100px;
+  height: 120px;
 }
 
-/* 中間藍色（預設橫排） */
+/* 藍色 */
 .middle {
   display: flex;
 }
@@ -45,21 +43,21 @@ body {
 .middle .box {
   background: #1fb5c1;
   flex: 1;
-  height: 120px;
+  height: 150px;
 }
 
-/* 下方灰色（預設橫排） */
+/* 灰色 */
 .bottom {
   display: flex;
 }
 
 .bottom .box {
-  background: #ddd;
+  background: #ccc;
   flex: 1;
-  height: 80px;
+  height: 100px;
 }
 
-/* 📱 小於480px → 直排 */
+/* 📱 手機版 */
 @media (max-width: 480px) {
 
   .middle {
@@ -68,6 +66,15 @@ body {
 
   .bottom {
     flex-direction: column;
+  }
+
+  /* ⭐ 重點：手機時增加高度 */
+  .middle .box {
+    height: 120px;
+  }
+
+  .bottom .box {
+    height: 80px;
   }
 }
 </style>
@@ -78,17 +85,14 @@ body {
 
 <div class="container">
 
-  <!-- 綠色 -->
   <div class="box header"></div>
 
-  <!-- 藍色 -->
   <div class="middle">
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
   </div>
 
-  <!-- 灰色 -->
   <div class="bottom">
     <div class="box"></div>
     <div class="box"></div>
