@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Image Styling Practice</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    .wrapper {
+      width: 760px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+      gap: 0;
+    }
+
+    .side-image {
+      width: 33%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 18px;
+      display: block;
+    }
+
+    .left-image {
+      object-position: center;
+    }
+
+    .center-box {
+      width: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 8px;
+    }
+
+    .circle-image {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid #ffffff;
+      box-shadow: 0 0 0 1px #999;
+      display: block;
+    }
+
+    .right-image {
+      object-fit: fill;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <img
+      class="side-image left-image"
+      src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80"
+      alt="Paris street with Eiffel Tower"
+    />
+
+    <div class="center-box">
+      <img
+        class="circle-image"
+        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80"
+        alt="Scenic circular image"
+      />
+    </div>
+
+    <img
+      class="side-image right-image"
+      src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80"
+      alt="Paris street with Eiffel Tower distorted"
+    />
+  </div>
+</body>
+</html>
