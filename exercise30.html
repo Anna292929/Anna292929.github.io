@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mouse Interaction Example</title>
 
+<style>
+body{
+    font-family: "Times New Roman", serif;
+    background-color: white;
+}
+
+.container{
+    width: 180px;
+    height: 110px;
+    background-color: white;
+    border: 1px solid #999;
+    padding: 10px;
+    margin: 30px;
+}
+
+#text{
+    font-size: 22px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+button{
+    font-size: 18px;
+    padding: 5px 12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div id="text">Hello</div>
+    <button id="btn">Button</button>
+</div>
+
+<script>
+const btn = document.getElementById("btn");
+const text = document.getElementById("text");
+
+btn.addEventListener("mouseover", function(){
+    text.style.color = "magenta";
+    text.innerHTML = "Hello";
+});
+
+btn.addEventListener("mouseout", function(){
+    text.style.color = "black";
+    text.innerHTML = "Hello";
+});
+
+btn.addEventListener("click", function(){
+    text.style.color = "magenta";
+    text.innerHTML = "Mouse Click";
+});
+</script>
+
+</body>
+</html>
