@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form Validation Practice</title>
+
+<style>
+body{
+    font-family: Arial, serif;
+    margin: 30px;
+    font-size: 22px;
+}
+
+input{
+    width: 220px;
+    height: 35px;
+    font-size: 22px;
+}
+
+button{
+    height: 40px;
+    font-size: 22px;
+}
+
+#message{
+    margin-top: 25px;
+    font-size: 24px;
+}
+</style>
+</head>
+
+<body>
+
+<p>Please input a number between 150 and 300:</p>
+
+<input type="text" id="num">
+<button onclick="checkValue()">Submit</button>
+
+<p id="message"></p>
+
+<script>
+function checkValue(){
+    let value = document.getElementById("num").value;
+    let message = document.getElementById("message");
+
+    if(value < 150){
+        message.innerHTML = "Value too small";
+    }
+    else if(value > 300){
+        message.innerHTML = "Value too large";
+    }
+    else{
+        message.innerHTML = "Input OK";
+    }
+}
+</script>
+
+</body>
+</html>
