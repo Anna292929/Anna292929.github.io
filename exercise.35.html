@@ -1,17 +1,19 @@
-var Person = {
-    firstName : "Tony",
-    lastName : "Lee",
-    age : 50,
-    eyeColor : "Blue"
-};
-
-// List all properties
-for (var x in Person) {
-    console.log(x + " : " + Person[x]);
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
 }
 
-// Delete age property
-delete Person.age;
+var myFriend = new Person("Tony", "Lee", 50, "Blue");
 
-// Print object after deleting age
-console.log(Person);
+// List all properties
+for (var x in myFriend) {
+    console.log(x + " : " + myFriend[x]);
+}
+
+// Delete the age property
+delete myFriend.age;
+
+// Print the object after deleting age
+console.log(myFriend);
