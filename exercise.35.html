@@ -1,0 +1,27 @@
+var Person = {
+    firstName: "Tony",
+    lastName: "Lee",
+    age: 50,
+    eyeColor: "Blue"
+};
+
+console.log("Original object:");
+console.log("var Person = {");
+
+for (var x in Person) {
+    console.log("    " + x + ' : "' + Person[x] + '",');
+}
+
+console.log("};");
+
+delete Person.age;
+
+console.log("");
+console.log("After deleting age property:");
+console.log("var Person = {");
+
+for (var x in Person) {
+    console.log("    " + x + ' : "' + Person[x] + '",');
+}
+
+console.log("};");
