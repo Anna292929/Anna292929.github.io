@@ -1,40 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>JavaScript Object Properties</title>
-</head>
-<body>
+var Person = {
+    firstName : "Tony",
+    lastName : "Lee",
+    age : 50,
+    eyeColor : "Blue"
+};
 
-  <h2>JavaScript Object Properties</h2>
+// List all properties
+for (var x in Person) {
+    console.log(x + " : " + Person[x]);
+}
 
-  <script>
-    var Person = {
-      firstName: "Tony",
-      lastName: "Lee",
-      age: 50,
-      eyeColor: "Blue"
-    };
+// Delete age property
+delete Person.age;
 
-    // List all properties of the object
-    document.write("Properties of Person object:<br>");
-
-    for (var property in Person) {
-      document.write(property + ": " + Person[property] + "<br>");
-    }
-
-    // Delete the age property
-    delete Person.age;
-
-    document.write("<br>After deleting age property:<br>");
-
-    // Print the object after deleting age
-    for (var property in Person) {
-      document.write(property + ": " + Person[property] + "<br>");
-    }
-
-    // Also print in console
-    console.log("After deleting age:", Person);
-  </script>
-
-</body>
-</html>
+// Print object after deleting age
+console.log(Person);
