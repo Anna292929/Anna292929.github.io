@@ -1,3 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Object Properties</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h2 {
+            color: #1f2a44;
+        }
+
+        .box {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Original Object Properties</h2>
+<div class="box" id="before"></div>
+
+<h2>Object After Deleting Age Property</h2>
+<div class="box" id="after"></div>
+
+<script>
 var Person = {
     firstName: "Tony",
     lastName: "Lee",
@@ -5,23 +38,24 @@ var Person = {
     eyeColor: "Blue"
 };
 
-console.log("Original object:");
-console.log("var Person = {");
+var text = "";
 
 for (var x in Person) {
-    console.log("    " + x + ' : "' + Person[x] + '",');
+    text += x + " : " + Person[x] + "<br>";
 }
 
-console.log("};");
+document.getElementById("before").innerHTML = text;
 
 delete Person.age;
 
-console.log("");
-console.log("After deleting age property:");
-console.log("var Person = {");
+var text2 = "";
 
 for (var x in Person) {
-    console.log("    " + x + ' : "' + Person[x] + '",');
+    text2 += x + " : " + Person[x] + "<br>";
 }
 
-console.log("};");
+document.getElementById("after").innerHTML = text2;
+</script>
+
+</body>
+</html>
