@@ -5,11 +5,6 @@ var Person = {
     eyeColor : "Blue"
 };
 
-// 1. 列出物件的所有屬性名稱
-console.log("原始屬性列表:", Object.keys(Person).join(", "));
-
-// 2. 刪除 age 屬性
+console.log(Object.keys(Person).join(", "));
 delete Person.age;
-
-// 3. 刪除後印出整個物件
-console.log("刪除 'age' 後的物件:", Person);
+console.log(Person);
